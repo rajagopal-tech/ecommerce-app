@@ -1,0 +1,109 @@
+/* Cart container */
+.cart-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Title */
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cart item card */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Left side */
+.cart-details {
+  flex: 1;
+}
+
+.cart-details h4 {
+  margin: 0;
+}
+
+.cart-details p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Right side buttons */
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Quantity buttons */
+.qty-btn {
+  padding: 5px 10px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.qty-btn:hover {
+  background: #bbb;
+}
+
+/* Remove button */
+.remove-btn {
+  padding: 6px 10px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: darkred;
+}
+
+/* Total section */
+.cart-total {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f8f8f8;
+  text-align: right;
+}
+
+/* Checkout button */
+.checkout-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background: darkgreen;
+}
+.cart-item:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
+}
+.success-msg {
+  background: #e6ffe6;
+  color: green;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
