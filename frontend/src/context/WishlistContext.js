@@ -5,7 +5,6 @@ const WishlistContext = createContext();
 
 export const WishlistProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   // Load wishlist on mount if logged in
   useEffect(() => {
@@ -17,14 +16,11 @@ export const WishlistProvider = ({ children }) => {
 
   const fetchWishlist = async () => {
     try {
-      setLoading(true);
       const res = await API.get('/users/wishlist');
       // res is already the response data because of the API interceptor
       setWishlist(res.data.map(item => item._id));
-      setLoading(false);
     } catch (err) {
       console.error('Error fetching wishlist:', err);
-      setLoading(false);
     }
   };
 

@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShoppingBag, Plus, Minus, Trash2, ArrowRight } from 'lucide-react';
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
-import API from '../api';
 import '../cartDrawer.css';
 
 const CartDrawer = () => {
@@ -78,8 +77,8 @@ const CartDrawer = () => {
               ) : (
                 <div className="cart-items">
                   {cart.map((item) => (
-                    <motion.div 
-                      key={item._id} 
+                    <motion.div
+                      key={item._id}
                       layout
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}

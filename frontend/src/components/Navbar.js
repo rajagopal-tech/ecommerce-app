@@ -4,7 +4,6 @@ import { CartContext } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { ShoppingBag, Heart, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import "../navbar.css";
 
 function Navbar() {
@@ -35,7 +34,7 @@ function Navbar() {
       </button>
 
       {/* Mobile Overlay */}
-      <div 
+      <div
         className={`mobile-overlay ${isMenuOpen ? "visible" : ""}`}
         onClick={() => setIsMenuOpen(false)}
       />
@@ -43,7 +42,7 @@ function Navbar() {
       <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
         <Link to="/products" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link>
         <Link to="/orders" className="nav-link" onClick={() => setIsMenuOpen(false)}>Orders</Link>
-        
+
         <Link to="/wishlist" className="cart-link" onClick={() => setIsMenuOpen(false)}>
           <div className="cart-icon-wrapper">
             <Heart size={22} className={wishlist.length > 0 ? "text-red-500 fill-current" : ""} />
@@ -64,7 +63,7 @@ function Navbar() {
 
         <Link to="/profile" className="nav-link" onClick={() => setIsMenuOpen(false)}>Profile</Link>
         <Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</Link>
-        
+
         {isAdmin && <Link to="/admin" className="admin-link" onClick={() => setIsMenuOpen(false)}>Admin</Link>}
 
         <button onClick={() => { handleLogout(); setIsMenuOpen(false); }} className="logout-btn">Logout</button>
